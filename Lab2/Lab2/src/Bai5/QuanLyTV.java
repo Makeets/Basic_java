@@ -135,10 +135,56 @@ public class QuanLyTV {
          Xuat1PhanTu(b);
      }
     }
+    public void timTheoLoai(String s)
+    {
+        if(s.equalsIgnoreCase("Sach"))
+        {
+            System.out.println("Danh sách sách");
+            for(TaiLieu a : TaiLieu1)
+            {
+                if(a instanceof Sach)
+                {
+                    Xuat1PhanTu(a);
+                    System.out.println("------------");
+                }
+            }
+        }
+        else
+            if(s.equalsIgnoreCase("Bao"))
+            {
+                System.out.println("Danh sách báo");
+                for(TaiLieu a: TaiLieu1)
+                {
+                    if(a instanceof Bao)
+                    {
+                        Xuat1PhanTu(a);
+                        System.out.println("-----------");
+                    }
+                }
+                
+            }
+            else 
+                if(s.equalsIgnoreCase("Tap chi"))
+                {   
+                    System.out.println("Danh sách tạp chí");
+                    for(TaiLieu a: TaiLieu1)
+                    {
+                        if(a instanceof TapChi)
+                        {
+                            Xuat1PhanTu(a);
+                            System.out.println("------------");
+                        }
+                    }
+                }
+    }
     public static void main(String[] args) {
         QuanLyTV a= new QuanLyTV();
+        Scanner sc2= new Scanner(System.in);
         a.Nhap();
         a.XuatToanBo();
-        
+        System.out.println("Nhập loại cần tìm");
+        String b;
+        b= sc2.nextLine();
+        a.timTheoLoai(b);
     }
 }
