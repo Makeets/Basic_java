@@ -99,7 +99,7 @@ public class TimIP extends javax.swing.JInternalFrame {
                         .addComponent(jButton1)))
                 .addGap(34, 34, 34)
                 .addComponent(jButton2)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,20 +115,19 @@ public class TimIP extends javax.swing.JInternalFrame {
         try
         {
             int i, j;
-            InetAddress addr[] =
-            InetAddress.getAllByName(txtTen.getText());
+            InetAddress addr[] = InetAddress.getAllByName(txtTen.getText());
             DefaultListModel dlm = new DefaultListModel();
             for (i = 0; i < addr.length; i++)
                 {
-                    byte[] ipAddr = addr[i].getAddress();
-                    String ipAddrStr = "";
-                           for (j = 0; j < ipAddr.length; j++)
-                                    {
-                                        if(j > 0)
-                                            ipAddrStr += ".";
-                                            ipAddrStr += ipAddr[j]&0xFF;
-                                    }
-                    dlm.addElement(ipAddrStr);
+//                    byte[] ipAddr = addr[i].getAddress();
+//                    String ipAddrStr = "";
+//                           for (j = 0; j < ipAddr.length; j++)
+//                                    {
+//                                        if(j > 0)
+//                                            ipAddrStr += ".";
+//                                            ipAddrStr += ipAddr[j]&0xFF;
+//                                    }
+                    dlm.addElement(addr[i].getHostAddress());
                 }
                         ListIP.setModel(dlm);
         }

@@ -100,9 +100,19 @@ public class Bai3 extends javax.swing.JFrame {
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("Tìm IP của máy cục bộ");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuItem5.setText("Kiểm tra IP");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem5);
 
         jMenuItem6.setText("Kiểm tra 2 tên miền");
@@ -128,7 +138,7 @@ public class Bai3 extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-      Frame1 f1=new Frame1();
+      IPv4_IPv6 f1=new IPv4_IPv6();
       Desktop1.add(f1);
       f1.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -158,6 +168,20 @@ public class Bai3 extends javax.swing.JFrame {
         Desktop1.add(f4);
         f4.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        IPMay f5=new IPMay();
+        Desktop1.add(f5);
+        f5.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        KtraIP f6=new KtraIP();
+        Desktop1.add(f6);
+        f6.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments

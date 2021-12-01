@@ -32,7 +32,7 @@ public class GiaMa {
 			Cipher c = Cipher.getInstance("RSA");
 			c.init(Cipher.DECRYPT_MODE, priKey);
 			byte decryptOut[] = c.doFinal(Base64.getDecoder().decode(
-					"o7pjtqo0sY63e2fWA6O4EKpEp8IjJIecolyjbWgir0zFldaZgqlgPLvtr5yJqc0XsYFDGULsDrc23PGxQJuqPnL2SOAHkqtGdfQ9AhNx5SzTiUqThpKDesPt7k3TQeGCGKtcYY1TK7Q7QSyey2am6IMTqQFgeqnKpqemkxBRIys="));
+					"fboBgjGrSyeR3SudXVkzv6mckmePb+z0yFPChU6ZuQEndD2fhqHVfZeIbMnjp4CDmqKWX8U2ZP6Ca5OzyM0EjrwRYohAlhXvtTyVbsYv/W41NmjiAJSJpHDAkvCWPEH5pjtgOHZoNeEdO21srlFOfg/NQyU3OFXfY7Dw1bCh9PQ="));
 			System.out.println("Dữ liệu sau khi giải mã: " + new String(decryptOut));
 		} catch (Exception ex) {
 			ex.printStackTrace();

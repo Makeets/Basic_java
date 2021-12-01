@@ -116,8 +116,8 @@ public class TimTen extends javax.swing.JInternalFrame {
         try
                 {
                     InetAddress addr = InetAddress.getByName(txtIP.getText());
-                    String hostname = addr.getHostName();
-                    txtTen.setText(hostname);
+//                    String hostname = addr.getHostName();
+                    txtTen.setText(addr.getHostName());
                 }
         catch (UnknownHostException ex)
                 {

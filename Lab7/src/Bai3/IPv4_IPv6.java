@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author Thang
  */
-public class Frame1 extends javax.swing.JInternalFrame {
+public class IPv4_IPv6 extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Frame1
      */
-    public Frame1() {
+    public IPv4_IPv6() {
         initComponents();
     }
 
